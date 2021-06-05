@@ -1,27 +1,10 @@
 'use strict';
 
 const startGame = function() {
-   let hiddenNumber = 95;
-   
+   let hiddenNumber = Math.floor(Math.random() * 101);
 
    const gameBot = function () {
       let userNumber = prompt("Угадай число от 1 до 100");
-
-      //if(userNumber < hiddenNumber) {
-      //   alert('Загаданное число меньше');
-      //   gameBot();
-      //} else if(userNumber > hiddenNumber) {
-      //   alert('Загаданное число больше');
-      //   gameBot();
-      //} else if(userNumber === null) {
-      //   alert('Игра окончена');
-      //   console.log(userNumber);
-      //} else if(isNaN(userNumber) || userNumber.trim() === '') {
-      //   alert('Введи число!');
-      //   gameBot();
-      //} else {
-      //   alert('Поздравляю, Вы угадали!!!');
-      //}
 
       if(userNumber === null) {
          alert('Игра окончена');
