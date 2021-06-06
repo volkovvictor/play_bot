@@ -8,20 +8,25 @@ const startGame = function() {
 
       if(userNumber === null) {
          alert('Игра окончена');
-      } else if(isNaN(userNumber) || userNumber.trim() === '') {
+      } 
+      if(isNaN(userNumber) || userNumber.trim() === '') {
          alert('Введи число!');
          gameBot();
-      } else if(userNumber < hiddenNumber) {
-         alert('Загаданное число меньше');
-         gameBot();
-      } else if (userNumber > hiddenNumber) {
+      }
+      if(userNumber < hiddenNumber) {
          alert('Загаданное число больше');
          gameBot();
-      } else {
-            alert('Поздравляю, Вы угадали!!!');
+      }
+      if (userNumber > hiddenNumber) {
+         alert('Загаданное число меньше');
+         gameBot();
+      } 
+      if (userNumber == hiddenNumber) {
+         alert('Поздравляю, Вы угадали!!!');
       }
    };
 
+   console.log(hiddenNumber);
    return gameBot();
 };
 
